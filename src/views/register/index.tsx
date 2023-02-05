@@ -1,3 +1,5 @@
+import { getOngs } from "@/lib";
+import { GetStaticProps } from "next";
 import Link from "next/link";
 import { memo, useState } from "react";
 import { FiArrowLeft, FiPower, FiTrash2 } from "react-icons/fi";
@@ -8,7 +10,7 @@ function RegisterView() {
   const [whatsapp,setWhatsapp]=useState('');
   const [city,setCity]=useState('');
   const [uf,setUf]=useState('');
-  async function handRegister(e){
+  async function handRegister(e:any){
     e.preventDefault();
 
     const data={
@@ -74,3 +76,11 @@ function RegisterView() {
 }
 
 export default memo(RegisterView);
+export const getStaticProps: GetStaticProps = async () =>{
+    const ongs = getOngs()
+    return{
+      props:{
+        ongs
+      }
+    }
+  }
