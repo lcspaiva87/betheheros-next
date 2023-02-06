@@ -5,6 +5,7 @@ const prisma = new PrismaClient();
 
 export async function getOngs() {
   const ongs = await prisma.ongs.findMany();
+  console.log("ongs",ongs)
   return ongs;
 }
 
