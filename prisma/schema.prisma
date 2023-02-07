@@ -11,10 +11,20 @@ datasource db {
 }
 
 model ongs {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  uf       String
-  city     String
-  name     String
-  whatsapp String
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  uf        String
+  city      String
+  name      String
+  whatsapp  String
   email     String
+  incident incidents[]
+}
+
+model incidents {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  value       Float
+  ong_id      ongs   @relation(references: [id], fields: [ongsId])
+  ongsId      String @db.ObjectId
 }

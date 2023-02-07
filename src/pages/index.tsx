@@ -3,8 +3,9 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import HomeView from "../views/home/index"
-import { getOngs } from '@/lib'
+
 import { GetStaticProps } from 'next'
+import { getOngs } from '@/connection/ongs'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -19,12 +20,4 @@ export default function Home() {
       <HomeView />
     </>
   )
-}
-export const getStaticProps: GetStaticProps = async () =>{
-  const ongs = await getOngs()
-  return{
-    props:{
-      ongs
-    }
-  }
 }

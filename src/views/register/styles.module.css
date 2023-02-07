@@ -51,3 +51,8 @@
   .register_container .content form .input-grup input + input{
       margin-left: 8px;
   }
+  .error{
+    color:#e02041;
+    font-size: 12px;
+    margin-top: 8px;
+  }
