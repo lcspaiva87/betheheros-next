@@ -12,7 +12,7 @@ function HomeView() {
           <h1>Faça seu logon</h1>
 
           <input
-            placeholder="Sua ID"
+            placeholder="Seu email"
             value={id}
             onChange={(e) => setId(e.target.value)}
           />

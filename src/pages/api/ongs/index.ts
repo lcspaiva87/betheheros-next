@@ -1,23 +1,25 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { PrismaClient } from "@prisma/client";
-import { getOngs, postOngs } from "../../../lib";
-import { ongsProps } from "@/@types/ongs";
+import { ongs } from "@prisma/client";
+import { createOngs, getOngs } from "@/connection/ongs";
 
-export default async function ongs(req: NextApiRequest, res: NextApiResponse) {
+export default async function OngController(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { method } = req;
-  const prisma = new PrismaClient();
   if (method === "GET") {
-    const ongs = getOngs();
+    const ongs = await getOngs();
     return res.status(200).json({
       data: ongs,
     });
   } else if (method === "POST") {
-    const { name, uf, city, whatsapp, email }: ongsProps = req.body;
-    const ongs = postOngs({name, uf, city, whatsapp, email});
-    return res.status(200).json({
-      data: ongs,
-    });
+    try {
+      const ongs = await createOngs(req.body, res.statusCode);
+      return res.status(200).json({
+        ongs,
+      });
+    } catch (error) {
+      return res.status(500).json({ message: "Erro ao salvar ONG" });
+    }
   }
-
-  return res.status(404).json({ message: "Router not found" });
 }
