@@ -1,11 +1,13 @@
-import { GetStaticProps } from "next";
+/* eslint-disable react-hooks/rules-of-hooks */
 import Link from "next/link";
-import { memo, useState } from "react";
+import { memo } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import styles from "./styles.module.css";
-
+import { toast } from "react-toastify";
 import { ErrorMessage } from "@hookform/error-message";
+import { useRouter } from "next/router";
+
 interface IFormInputprops {
   name: string;
   email: string;
@@ -13,21 +15,30 @@ interface IFormInputprops {
   city: string;
   uf: string;
 }
-function RegisterView() {
+function RegisterView({ ongs }: any) {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<IFormInputprops>();
-
+  const router = useRouter();
   const handleSubm = async (data: any) => {
+    if (ongs.some((item: any) => item.email === data.email)) {
+      toast.warning("E-mail já cadastrado");
+      return;
+    }
     await fetch("/api/ongs", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
+    }).then((res) => {
+      if (res.status === 200) {
+        toast.success("Cadastro realizado com sucesso!");
+
+        router.push("/");
+      }
     });
   };
   return (
@@ -49,7 +60,7 @@ function RegisterView() {
           <input
             placeholder="Nome da ONG"
             {...register("name", {
-              required: "This is required message",
+              required: "Please enter a valid name",
               maxLength: 20,
               pattern: /^[A-Za-z]+$/i,
             })}
@@ -91,7 +102,7 @@ function RegisterView() {
             as="p"
             className={styles.error}
           />
-          
+
           <div className="input-grup">
             <input
               placeholder="cidade"
@@ -117,7 +128,7 @@ function RegisterView() {
                 pattern: /^[A-Za-z]+$/i,
               })}
             />
-               <ErrorMessage
+            <ErrorMessage
               errors={errors}
               name="uf"
               as="p"

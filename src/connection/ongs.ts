@@ -5,7 +5,7 @@ export async function getOngs() {
   return ongs;
 }
 
-export async function createOngs(data: any) {
+export async function createOngs(data: any, res: any) {
   const { name, uf, city, whatsapp, email } = data;
   const ongs = await prisma.ongs.create({
     data: {
@@ -15,8 +15,7 @@ export async function createOngs(data: any) {
       whatsapp,
       email,
     },
-  })
-
-  ;
+  });
+  await prisma.$disconnect()
   return ongs;
 }
