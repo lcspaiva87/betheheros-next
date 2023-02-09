@@ -1,12 +1,32 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import App, { AppContext } from "next/app";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <ToastContainer />
-    </>
-  );
+import { OngsProvider } from "../context/ongContext";
+
+class MyApp extends App {
+  static async getInitialProps({ Component, ctx }: AppContext) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { pageProps };
+  }
+
+  render() {
+    const { Component, pageProps } = this.props;
+
+    return (
+      <>
+        <OngsProvider>
+          <Component {...pageProps} />
+        </OngsProvider>
+        <ToastContainer />
+      </>
+    );
+  }
 }
+
+export default MyApp;
