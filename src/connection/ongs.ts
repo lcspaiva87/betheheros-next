@@ -1,3 +1,4 @@
+
 import { ongsProps } from "@/@types/ongs";
 import { prisma } from "./db";
 export async function getOngs() {
@@ -5,7 +6,7 @@ export async function getOngs() {
   return ongs;
 }
 
-export async function createOngs(data: any, res: any) {
+export async function createOngs(data: ongsProps) {
   const { name, uf, city, whatsapp, email } = data;
   const ongs = await prisma.ongs.create({
     data: {

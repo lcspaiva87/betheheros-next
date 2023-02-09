@@ -22,6 +22,7 @@ function RegisterView({ ongs }: any) {
     formState: { errors },
   } = useForm<IFormInputprops>();
   const router = useRouter();
+
   const handleSubm = async (data: any) => {
     if (ongs.some((item: any) => item.email === data.email)) {
       toast.warning("E-mail já cadastrado");
@@ -36,7 +37,6 @@ function RegisterView({ ongs }: any) {
     }).then((res) => {
       if (res.status === 200) {
         toast.success("Cadastro realizado com sucesso!");
-
         router.push("/");
       }
     });
