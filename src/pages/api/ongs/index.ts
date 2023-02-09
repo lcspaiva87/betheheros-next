@@ -14,7 +14,7 @@ export default async function OngController(
     });
   } else if (method === "POST") {
     try {
-      const ongs = await createOngs(req.body, res.statusCode);
+      const ongs = await createOngs(req.body);
       return res.status(200).json({
         ongs,
       });
