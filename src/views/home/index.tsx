@@ -24,7 +24,6 @@ function HomeView(ongs:any) {
 
 
   const handleSubm = async (value: any) => {
-
     const result: any = dataOngs.filter((item: any) => item.email === value.email);
     setOngs(result)
     
