@@ -23,7 +23,7 @@ export default function Home(props:any) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const ongs = await getOngs();
-  console.log("getServerSideProps",ongs)
+
   return {
     props: {
       data: ongs,
