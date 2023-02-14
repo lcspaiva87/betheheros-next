@@ -1,6 +1,7 @@
 import { prisma } from "@/connection/db";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getOngs } from "./ongs";
+
 export async function session(req: NextApiRequest, res: NextApiResponse) {
   const { email } = req.body;
   const ongs = await getOngs();

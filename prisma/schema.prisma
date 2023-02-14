@@ -24,7 +24,7 @@ model incidents {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
-  value       Float
+  value       Float  
   ong_id      ongs   @relation(references: [id], fields: [ongsId])
   ongsId      String @db.ObjectId
 }
