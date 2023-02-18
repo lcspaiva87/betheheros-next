@@ -6,7 +6,7 @@
 
 <h2 align="center"> Aplicação para conectar ONGs e outras instituições a pessoas que tem disponibilidade para ajudar </h2>
 
-<h3 align="center"> Criada com a stack <img src="/nextjs.svg" alt="react" height="18"> NextJs, <img src="/prisma.svg" alt="react-native" height="18"> Prisma,<img src="imgs/mongo.png" alt="mongo" height="18"> MongoDb </h3>
+<h3 align="center"> Criada com a stack <img src="https://github.com/lcspaiva87/betheheros-next/blob/main/public/nextjs.svg" alt="react" height="18"> NextJs, <img src="https://github.com/lcspaiva87/betheheros-next/blob/main/public/prisma.svg" alt="react-native" height="18"> Prisma,<img src="https://github.com/lcspaiva87/betheheros-next/blob/main/public/mongo.png" alt="mongo" height="18"> MongoDb </h3>
 
 <p align="center"> <img src="imgs/heroes.png" alt="heroes" height="250"> </p>
 
