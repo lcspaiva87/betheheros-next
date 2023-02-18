@@ -1,6 +1,5 @@
 
 export async function createIncidents(data:any,idOng:any) {
-
   try {
     const response = await fetch("/api/incidents", {
       method: "POST",
@@ -10,7 +9,7 @@ export async function createIncidents(data:any,idOng:any) {
         Authorization: idOng,
       },
     });
-    return response;
+    return response.json();
   } catch (error) {
     console.log(error);
   }
@@ -29,8 +28,7 @@ export async function listIncidents(idOng:any) {
 
 
 export async function deleteIncidents(idOng:any,idIncident:string) {
-  console.log("aqui",idOng)
-  const response = await fetch(`/api/delete/${idIncident}`, {
+  const response = await fetch(`/api/incidents/`, {
     method: "DELETE",
     body: JSON.stringify(idIncident),
     headers: {
@@ -40,3 +38,4 @@ export async function deleteIncidents(idOng:any,idIncident:string) {
   });
   return response.json();
 }
+

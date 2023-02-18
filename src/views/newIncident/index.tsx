@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { useOngs } from "@/context/ongContext";
 import { createIncidents } from "@/services/incidents";
 import { ErrorMessage } from "@hookform/error-message";
+import { toast } from "react-toastify";
 interface IFormInputprops {
   title: string;
   value: string;
@@ -25,6 +26,7 @@ function NewIncidentView() {
 
   const handleSubmitCreateIncidents = async (data: IFormInputprops) => {
     const response = await createIncidents(data, idOng);
+    toast.success(response.message);
     return response;
   };
 
@@ -54,7 +56,6 @@ function NewIncidentView() {
             placeholder="Título"
             {...register("title", {
               required: "digite um título válido",
-              maxLength: 20,
               pattern: /^[A-Za-z]+$/i,
             })}
           />
@@ -68,7 +69,6 @@ function NewIncidentView() {
             placeholder="Descrição"
             {...register("description", {
               required: "digite uma descrição valida",
-              maxLength: 20,
               pattern: /^[A-Za-z]+$/i,
             })}
           />
@@ -93,7 +93,7 @@ function NewIncidentView() {
             as="p"
             className={styles.error}
           />
-          <button className="button" type="submit">
+          <button className={styles.button} type="submit">
             Cadastrar
           </button>
         </form>

@@ -9,17 +9,9 @@ export default async function OngController(
   const { method } = req;
   if (method === "GET") {
     const ongs = await getOngs();
-    return res.status(200).json({
-      data: ongs,
-    });
+    return ongs
   } else if (method === "POST") {
-    try {
-      const ongs = await createOngs(req.body);
-      return res.status(200).json({
-        ongs,
-      });
-    } catch (error) {
-      return res.status(500).json({ message: "Erro ao salvar ONG" });
-    }
+    const ongs = await createOngs(req, res);
+    return ongs
   }
 }

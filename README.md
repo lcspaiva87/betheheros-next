@@ -1,38 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- então bora codar! -->
 
-## Getting Started
+<h1 align="center">
+    <img alt="" title="" src="imgs/logo.svg">
+</h1>
 
-First, run the development server:
+<h2 align="center"> Aplicação para conectar ONGs e outras instituições a pessoas que tem disponibilidade para ajudar </h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<h3 align="center"> Criada com a stack <img src="imgs/react.png" alt="react" height="18"> React, <img src="imgs/react-native.png" alt="react-native" height="18"> React Native, <img src="imgs/node.png" alt="node" height="18"> Node e <img src="imgs/sqlite.png" alt="node" height="18"> SQLite </h3>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center"> <img src="imgs/heroes.png" alt="heroes" height="250"> </p>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<p align="center"> Usando o poder de uma stack poderosa, que utiliza de uma única linguagem popular e moderna, o <img src="imgs/js.png" height="18" alt="javascript"> JavaScript. <br> Produtividade e performance de forma enxuta. </p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+A 11ª edição da Semana OmniStack, ocorrida entre 23/03 e 27/03, trouxe como projeto uma aplicação web e mobile inédita. Um sistema para conectar pessoas dispostas a ajudar a ONGs que precisam dessa ajuda.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Em uma semana foi desenvolvida uma aplicação do zero, dominando o backend, frontend e o mobile com uma única linguagem e uma única biblioteca de interfaces.
 
-## Learn More
+[Layout](https://www.figma.com/file/2C2yvw7jsCOGmaNUDftX9n/Be-The-Hero---OmniStack-11?node-id=0%3A1) da aplicação no <img src="imgs/figma.png" alt="figma" height="20"> Figma.
 
-To learn more about Next.js, take a look at the following resources:
+## Para rodar a aplicação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> OBS: pode-se utilizar o gerenciador de pacotes npm ou o yarn para rodar os comandos abaixo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Execute ```npm install``` nas pastas backend, frontend e mobile, para instalar as dependências.
 
-## Deploy on Vercel
+Rode ```npm start``` nas pastas backend e frontend para utilizar a versão web. Acesse via **localhost:3000**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Rode ```npm start``` nas pastas backend e mobile, acesse **localhost:19002**, leia o QR Code no seu celular e utilize o aplicativo <img src="imgs/expo.png" alt="rocketseat" height="20"> Expo para rodar a versão mobile no seu smartphone. Ou com algum emulador Android/iOS para rodar no seu computador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Telas
+
+<p align="center">
+    <img alt="" title="" src="imgs/print1.png">
+    <img alt="" title="" src="imgs/print2.png">
+    <img alt="" title="" src="imgs/print3.png">
+    <img alt="" title="" src="imgs/print4.png">
+    <img alt="" title="" src="imgs/print5.png">
+    <img alt="" title="" src="imgs/print6.png">
+    <img alt="" title="" src="imgs/print7.png">
+    <img alt="" title="" src="imgs/print8.png">
+    <img alt="" title="" src="imgs/print9.png">
+    <img alt="" title="" src="imgs/print-insomnia.png">
+</p>
+
+Veja também esse [vídeo](https://youtu.be/UygqW2eBJJA) com a demonstração das versões web e mobile rodando localmente.
+
+---
+
+**&copy; <img src="imgs/rocketseat.svg" alt="rocketseat" height="20"> [Rocketseat](https://rocketseat.com.br/)**
+
+**Instrutor: [Diego Fernandes](https://github.com/diego3g) | CTO Rocketseat**
+
+## Licença
+[MIT](https://github.com/christyanbrayan/be-the-hero/blob/master/LICENSE)
+
+---
+
+<h4 align="center"> <em>&lt;/&gt;</em> by <a href="https://github.com/christyanbrayan" target="_blank">christyanbrayan</a> </h4>

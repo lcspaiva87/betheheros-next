@@ -1,7 +1,4 @@
-import { prisma } from "@/connection/db";
-import { getIncidents, incidentsCreate } from "@/connection/incidents";
-import { getOngs } from "@/connection/ongs";
-import { deleteIncidents } from "@/services/incidents";
+import { deletencidents, getIncidents, incidentsCreate } from "@/connection/incidents";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function incidentsController(
@@ -26,19 +23,9 @@ export default async function incidentsController(
       data: incident,
     });
   } else if (req.method === "DELETE") {
-    try {
-      const id = req.body;
-
-      const incidents = await prisma.incidents.delete({
-        where: { id: String(id) },
-      });
-      return res.status(200).json({
-        message: "Incident deleted successfully",
-      });
-    } catch (error) {
-      return res.status(500).json({
-        message: error,
-      });
-    }
+    const incident = await deletencidents(req, res);
+    return res.status(200).json({
+      data: incident,
+    });
   }
 }

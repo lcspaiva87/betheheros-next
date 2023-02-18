@@ -1,4 +1,3 @@
-import { ongsProps } from '@/@types/ongs';
 import { getOngs } from '@/connection/ongs';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head'

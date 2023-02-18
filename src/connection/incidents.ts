@@ -18,10 +18,10 @@ export async function incidentsCreate(
         ongsId,
       },
     });
-    
-    return res.status(200).json({ id: incident.id });
+
+    return res.status(200).json({ message: "O incidente foi criado com sucesso.", });
   } catch (error: unknown) {
-    return res.status(500).json({ error: "Failed to create incident" });
+    return res.status(500).json({ message: "Lamento informar que houve um erro ao criar o incidente" });
   }
 }
 
@@ -30,17 +30,34 @@ export async function getIncidents(req: NextApiRequest, res: NextApiResponse) {
     const ongsId = req.headers.authorization;
     const data = await prisma.incidents.findMany({
       where: {
-        ongsId: ongsId
-      }
+        ongsId: ongsId,
+      },
     });
     return res.status(200).json({
       data,
-    })
-  
+    });
   } catch (error: unknown) {
     return res.status(404).json({
-      message:error,
+      message: error,
     });
+  }
+}
 
+export async function deletencidents(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  try {
+    const id = req.body;
+    const incidents = await prisma.incidents.delete({
+      where: { id: String(id) },
+    });
+    return res.status(200).json({
+      message: "Incident deleted successfully",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: error,
+    });
   }
 }
