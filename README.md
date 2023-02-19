@@ -3,7 +3,13 @@
 <h1 align="center">
     <img alt="" title="" src="imagens/logo.svg">
 </h1>
-
+<p align="center">
+<img src="https://img.shields.io/github/languages/count/lcspaiva87/betheheros-next">
+<img src="https://img.shields.io/github/directory-file-count/lcspaiva87/betheheros-next">
+<img src="https://img.shields.io/github/package-json/v/lcspaiva87/betheheros-next">
+<img src="https://img.shields.io/github/languages/count/lcspaiva87/betheheros-next">
+<img src="https://img.shields.io/github/languages/count/lcspaiva87/betheheros-next">
+</p>
 <h2 align="center"> Aplicação para conectar ONGs e outras instituições a pessoas que tem disponibilidade para ajudar </h2>
 
 <h3 align="center"> Criada com a stack <img src="https://github.com/lcspaiva87/betheheros-next/blob/main/public/nextjs.svg" alt="react" height="18"> NextJs, <img src="https://github.com/lcspaiva87/betheheros-next/blob/main/public/prisma.svg" alt="react-native" height="18"> Prisma,<img src="https://github.com/lcspaiva87/betheheros-next/blob/main/public/mongo.png" alt="mongo" height="18"> MongoDb </h3>
@@ -51,4 +57,4 @@ Rode `npm start` nas pastas backend e mobile, acesse **localhost:19002**, leia o
 
 ---
 
-<h4 align="center"> <em>&lt;/&gt;</em> by <a href="https://github.com/lcspaiva87" target="_blank">christyanbrayan</a> </h4>
+<h4 align="center"> <em>&lt;/&gt;</em> by <a href="https://github.com/lcspaiva87" target="_blank">Lucas Antonio</a> </h4>
