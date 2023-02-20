@@ -16,7 +16,7 @@
 
 <p align="center"> <img src="imagens/heroes.png" alt="heroes" height="250"> </p>
 
-<p align="center"> Usando o poder de uma stack poderosa, que utiliza de uma única linguagem popular e moderna, o <img src="imagens/js.png" height="18" alt="javascript"> JavaScript. <br> Produtividade e performance de forma enxuta. </p>
+
 
 ---
 
