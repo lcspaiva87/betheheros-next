@@ -4,7 +4,7 @@ import { getOngs } from "./ongs";
 
 export async function session(req: NextApiRequest, res: NextApiResponse) {
   const { email } = req.body;
-  const ongs = await getOngs();
+  const ongs:any = await getOngs();
   if (ongs.some((item: any) => item.email === email)) {
     const result: any = ongs.find((item: any) => item.email === email);
     const ong = await prisma.ongs.findUnique({

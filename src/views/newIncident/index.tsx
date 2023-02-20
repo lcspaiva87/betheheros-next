@@ -45,6 +45,7 @@ function NewIncidentView() {
           <button
             className="back-link"
             onClick={() => router.push(`/profile/${idOng}`)}
+            style={{border:"none"}}
           >
             <FiArrowLeft size={16} color="#E02041" />
             Voltar para home
@@ -93,9 +94,7 @@ function NewIncidentView() {
             as="p"
             className={styles.error}
           />
-          <button className={styles.button} type="submit">
-            Cadastrar
-          </button>
+          <button className="button" type="submit">Cadastrar</button>
         </form>
       </div>
     </div>

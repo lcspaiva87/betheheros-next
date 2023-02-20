@@ -20,9 +20,11 @@
 
 ---
 
-A 11ª edição da Semana OmniStack, ocorrida entre 23/03 e 27/03, trouxe como projeto uma aplicação web e mobile inédita. Um sistema para conectar pessoas dispostas a ajudar a ONGs que precisam dessa ajuda.
+A versão mais recente do projeto Be The Hero apresenta melhorias significativas em relação à versão anterior (v1). Uma das principais melhorias é o uso do Prisma no back-end para gerenciar o banco de dados, o que torna a implementação e o acesso aos dados mais eficientes.
 
-Em uma semana foi desenvolvida uma aplicação do zero, dominando o backend, frontend e o mobile com uma única linguagem e uma única biblioteca de interfaces.
+Além disso, no front-end, a tecnologia utilizada é o Next.js, que é um framework React que oferece recursos avançados de renderização de páginas e facilidade na configuração de rotas e gerenciamento de estados. Essa tecnologia melhora significativamente a experiência do usuário e a performance do aplicativo.
+
+Em resumo, a versão mais recente do Be The Hero apresenta melhorias significativas no back-end, com o uso do Prisma, e no front-end, com o uso do Next.js, proporcionando uma melhor experiência para os usuários e desenvolvedores.
 
 [Layout](https://www.figma.com/file/2C2yvw7jsCOGmaNUDftX9n/Be-The-Hero---OmniStack-11?node-id=0%3A1) da aplicação no <img src="imagens/figma.png" alt="figma" height="20"> Figma.
 
@@ -47,13 +49,10 @@ Rode `npm start` nas pastas backend e mobile, acesse **localhost:19002**, leia o
 
 ---
 
-**&copy; <img src="imagens/rocketseat.svg" alt="rocketseat" height="20"> [Rocketseat](https://rocketseat.com.br/)**
-
-**Instrutor: [Diego Fernandes](https://github.com/diego3g) | CTO Rocketseat**
 
 ## Licença
 
-[MIT](https://github.com/christyanbrayan/be-the-hero/blob/master/LICENSE)
+[MIT](https://github.com/lcspaiva87/betheheros-next/blob/main/LICENSE.txt)
 
 ---
 
