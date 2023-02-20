@@ -26,17 +26,16 @@ Além disso, no front-end, a tecnologia utilizada é o Next.js, que é um framew
 
 Em resumo, a versão mais recente do Be The Hero apresenta melhorias significativas no back-end, com o uso do Prisma, e no front-end, com o uso do Next.js, proporcionando uma melhor experiência para os usuários e desenvolvedores.
 
-[Layout](https://www.figma.com/file/2C2yvw7jsCOGmaNUDftX9n/Be-The-Hero---OmniStack-11?node-id=0%3A1) da aplicação no <img src="imagens/figma.png" alt="figma" height="20"> Figma.
+
 
 ## Para rodar a aplicação
 
 > OBS: pode-se utilizar o gerenciador de pacotes npm ou o yarn para rodar os comandos abaixo
 
-Execute `npm install` nas pastas backend, frontend e mobile, para instalar as dependências.
+Execute `npm install`  para instalar as dependências.
 
-Rode `npm start` nas pastas backend e frontend para utilizar a versão web. Acesse via **localhost:3000**.
+Rode `npm start`  Acesse via **localhost:3000**.
 
-Rode `npm start` nas pastas backend e mobile, acesse **localhost:19002**, leia o QR Code no seu celular e utilize o aplicativo <img src="imagens/expo.png" alt="rocketseat" height="20"> Expo para rodar a versão mobile no seu smartphone. Ou com algum emulador Android/iOS para rodar no seu computador.
 
 ## Telas
 
