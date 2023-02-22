@@ -16,6 +16,7 @@ export async function createOngs(req: NextApiRequest, res: NextApiResponse) {
     const handleMissingFields = (missingFields: String[]) => {
       if (missingFields.length) {
         return res.status(404).json({
+          status:400,
           message: `Campo${
             missingFields.length > 1 ? "s" : ""
           } ${missingFields.join(", ")} está${
@@ -28,13 +29,14 @@ export async function createOngs(req: NextApiRequest, res: NextApiResponse) {
     const requiredFields = ["name", "uf", "city", "whatsapp", "email"];
     const missingFields = requiredFields.filter((field) => !req.body[field]);
     handleMissingFields(missingFields);
-
+    console.log(req.body)
     const { name, uf, city, whatsapp, email } = req.body;
     if (ongs?.some((item: any) => item.email === email)) {
       return res
         .status(400)
         .json({
-          mesagem:
+          status:400,
+          message:
             "Desculpe, mas o endereço de e-mail que você tentou usar para se cadastrar já está em nosso sistema.",
         });
     }
@@ -44,7 +46,7 @@ export async function createOngs(req: NextApiRequest, res: NextApiResponse) {
         name,
         uf,
         city,
-        whatsapp,
+        whatsapp:String(whatsapp),
         email,
       },
     });
@@ -58,8 +60,9 @@ export async function createOngs(req: NextApiRequest, res: NextApiResponse) {
       });
   } catch (error) {
     return res
-      .status(200)
+      .status(500)
       .json({
+        status:500,
         message:
           " Erro ao criar Sua organização não governamental (ONG) ",
       
